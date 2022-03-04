@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>onclick event example</title>
+        <script>
+        function initElement() {
+            var p = document.getElementById("foo");
+            // NOTE: showAlert(); or showAlert(param); will NOT work here.
+            // Must be a reference to a function name, not a function call.
+            p.onclick = showAlert;
+            // p.onclick = function(event) { alert("moot!"); };
+        };
+
+        function showAlert(event) {
+            alert("onclick Event detected!");
+        }
+        </script>
+        <style>
+        #foo {
+            border: solid blue 2px;
+        }
+        </style>
+  </head>
+</head>
+    <body onload="initElement();">
+        <span id="foo">mi evento</span>
+        <p>click!</p>
+
+</body>
+</html>

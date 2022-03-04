@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Example</title>
+        <!-- inicio css -->
+            <style>
+                #t { border: 1px solid red }
+                #t1 { background-color: pink; margin-top: 15px;}
+                #t2 { background-color: rgb(61, 75, 112); }
+            </style>
+        <!-- fin css -->
+        <!-- inicio javascript -->
+        <script>
+            // Function to change the content of t2
+            function modifyText() {
+                let t2 = document.getElementById("t2");
+                let p = document.getElementById("p");
+                let valueParrafo=  p.firstChild.nodeValue;
+                console.log(valueParrafo);
+                let valueT2 = t2.firstChild.nodeValue;
+                if (valueT2 === 'Dos') {
+                    t2.firstChild.nodeValue = "Tres";
+                    
+                } else {
+                    t2.firstChild.nodeValue = "Dos";
+                }
+            }
+            
+            // Function to add event listener to t
+            function load() {
+                let el = document.getElementById("t");
+              
+                el.addEventListener("click", modifyText, false);
+            }
+            
+            document.addEventListener("DOMContentLoaded", load, false);
+            </script>
+        <!-- fin javascript -->
+</head>
+<body>
+    <table id="t">
+        <tr><td id="t1">Uno</td></tr>
+        <tr><td id="t2">Dos <p id="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur tenetur error fuga sit dicta iure officia facere expedita quibusdam. Mollitia magnam corporis facilis accusamus tempore accusantium nobis in id!</p></td></tr>
+     </table>
+</body>
+</html>

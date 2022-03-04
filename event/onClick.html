@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Example</title>
+        <!-- inicio css -->
+            <style>
+                #t { border: 1px solid red }
+                #t1 { background-color: pink; }
+                #t2 { background-color: rgb(61, 75, 112); }
+            </style>
+        <!-- fin css -->
+</head>
+<body>
+    <table  onclick="modifyText(event)" id="t">
+        <tr><td id="t1">Uno</td></tr>
+        <tr><td id="t2">Dos</td></tr>
+     </table>
+
+     <!-- <button onclick="miFunc()">Haz click</button>
+        <script>
+        function miFunc() {
+            alert('Se ha dado clic al botón!');
+        }
+        </script> -->
+
+        <!-- <p id="foo">Haz clic en este elemento.</p>
+        <script>
+        let p = document.getElementById("foo"); // Encuentra el elemento "p" en el sitio
+        p.onclick = muestraAlerta; // Agrega función onclick al elemento
+            
+        function muestraAlerta(evento) {
+            alert("Evento onclick ejecutado!");
+        }
+        </script> -->
+
+    <!-- <a href="https://guide.freecodecamp.org" onclick="miAlerta()">Guías</a>
+    <script>
+    function miAlerta(evento) {
+        event.preventDefault();
+        alert("Se ah dado clic al enlace pero el sitio no ah sido abierto");
+    }
+    </script> -->
+
+     <script src="./onClick.js"></script>
+</body>
+</html>
